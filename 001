@@ -37,7 +37,10 @@ class Library:
 
     def borrow_book(self, Title):
         book = self.find_book(Title)
-        print(book.borrow())
+            if book:
+                print(book.borrow())
+            else:
+                print(f"Sorry, the book '{Title}' is not in the library.")
 
     def return_book(self, Title):
         book = self.find_book(Title)
